@@ -4,7 +4,7 @@
 <!doctype html>
 <html ⚡4email>
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
@@ -20,13 +20,13 @@
       <div>
 
         <!-- Form -->
-        <form method="post" action-xhr="https://amp4email.io/unsubscribe">
+        <form method="post" id="unsubscribe" action-xhr="https://amp4email.io/unsubscribe">
           <p>Change how often you get emails:</p>
           <input type="radio" name="option" value="d" checked>Daily</input>
           <input type="radio" name="option" value="w">Weekly</input>
           <input type="radio" name="option" value="m">Monthly</input>
           <input type="radio" name="option" value="unsub">Unsubscribe me completely :(</input><br>
-          <textarea name="reason"></textarea><br>
+          <textarea name="reason" autoexpand></textarea><br>
           <input type="submit" value="Submit">
 
           <!-- Submission success -->

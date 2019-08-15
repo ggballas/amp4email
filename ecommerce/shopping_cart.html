@@ -1,0 +1,151 @@
+  <!doctype html>
+  <html ⚡4email>
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <style amp4email-boilerplate>body{visibility:hidden}</style>
+    <style amp-custom>
+
+      .product-card {
+        background-color: #fefefe;
+        border: 1px solid #e6e6e6;
+        width: 25%;
+        padding: 1rem;
+        margin: 10px;
+        float: left;
+      }
+
+      .product-card-thumbnail {
+        display: block;
+        position: relative;
+      }
+
+      .product-card-title {
+        font-family: 'Open sans', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        line-height: 1.45rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+
+      .product-card-desc {
+        color: #8a8a8a;
+        display: block;
+        font-family: 'Open sans', sans-serif;
+        font-size: 0.85rem;
+      }
+
+      .product-card-price {
+        color: #3e3e3e;
+        display: inline-block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-top: 0.8rem;
+      }
+
+      .product-card-sale {
+        color: #cacaca;
+        display: inline-block;
+        font-size: 0.85rem;
+        margin-left: 0.3rem;
+        text-decoration: line-through;
+      }
+
+      .product-card-colors {
+        display: block;
+        margin-top: 0.8rem;
+      }
+
+      .product-card-color-option {
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+      }
+
+      .pill-button {
+        background-color: #4ee097;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+      }
+
+      .pill-button:hover {
+        background-color: #f1f1f1;
+      }
+
+
+
+
+
+
+
+      .headerbar {
+        padding: 10px;
+        border-bottom: 1px solid black;
+        overflow: auto;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+
+    <nav class="headerbar" style="top: calc(0px);">
+      <div class="brand" style="float: left;">
+          AMP4email
+      </div>
+
+      <div style="float: right;">
+        Items: <span [text]="count">0</span>
+        <amp-img src="https://png2.kisspng.com/sh/998bb9a544e095aeba69f458f1e2521e/L0KzQYi4UsE4N5U1SZGAYUO5RLO9hMJkPWY6T5CCNUe7Q4K5VsE2OWQ6SKkBOUO0SIK9TwBvbz==/5a364b6d2c5557.7578312615135076931816.png"
+        width="40" height="40"></amp-img>
+      </div>
+
+    </nav><br>
+
+
+
+
+    <amp-list id="amp-list-placeholder" noloading width="auto"
+              height="1000"
+              layout="fixed-height" src="https://amp.gmail.dev/playground/public/ssr_amp_list">
+      <div placeholder>
+        <ul class="results">
+          <li></li><li></li><li></li><li></li><li></li>
+        </ul>
+      </div>
+      <template type="amp-mustache">
+
+        <div class="product-card">
+          <div class="product-card-thumbnail">
+            <a>
+              <amp-img width="150"
+              height="100"
+              alt="{{name}}"
+              src="{{img}}"></amp-img>
+            </a>
+          </div>
+          <h2 class="product-card-title"><a>{{name}}</a></h2>
+          <span class="product-card-desc">{{{stars}}}</span>
+          <span class="product-card-price">${{price}}</span>
+
+          <button class="pill-button" on="tap:AMP.pushState({ items: items + 1 })">Add to cart</button>
+
+        </div>
+
+      </template>
+    </amp-list>
+
+  </body>
+  </html>
