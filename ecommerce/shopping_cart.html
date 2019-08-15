@@ -12,7 +12,7 @@
       .product-card {
         background-color: #fefefe;
         border: 1px solid #e6e6e6;
-        width: 25%;
+        width: 170px;
         padding: 1rem;
         margin: 10px;
         float: left;
@@ -106,6 +106,7 @@
       </div>
 
       <div style="float: right;">
+        <button class="pill-button" on="tap:checkout-message.show" style="width: 150px; background-color: #ddd;">Checkout</button>
         Items: <span [text]="items">0</span>
         <amp-img src="https://png2.kisspng.com/sh/998bb9a544e095aeba69f458f1e2521e/L0KzQYi4UsE4N5U1SZGAYUO5RLO9hMJkPWY6T5CCNUe7Q4K5VsE2OWQ6SKkBOUO0SIK9TwBvbz==/5a364b6d2c5557.7578312615135076931816.png"
         width="40" height="40"></amp-img>
@@ -113,8 +114,7 @@
 
     </nav><br>
 
-
-
+    <p hidden id="checkout-message">Checkout is disabled in demo. In production, users can checkout and pay right from their inbox.</p>
 
     <amp-list id="amp-list-placeholder" noloading width="auto"
               height="1000"
@@ -145,6 +145,7 @@
 
       </template>
     </amp-list>
+
 
   </body>
   </html>
