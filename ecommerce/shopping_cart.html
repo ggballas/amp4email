@@ -100,14 +100,13 @@
   </head>
   <body>
 
-
     <nav class="headerbar" style="top: calc(0px);">
       <div class="brand" style="float: left;">
           AMP4email
       </div>
 
       <div style="float: right;">
-        Items: <span [text]="count">0</span>
+        Items: <span [text]="items">0</span>
         <amp-img src="https://png2.kisspng.com/sh/998bb9a544e095aeba69f458f1e2521e/L0KzQYi4UsE4N5U1SZGAYUO5RLO9hMJkPWY6T5CCNUe7Q4K5VsE2OWQ6SKkBOUO0SIK9TwBvbz==/5a364b6d2c5557.7578312615135076931816.png"
         width="40" height="40"></amp-img>
       </div>
@@ -140,7 +139,7 @@
           <span class="product-card-desc">{{{stars}}}</span>
           <span class="product-card-price">${{price}}</span>
 
-          <button class="pill-button" on="tap:AMP.pushState({ items: items + 1 })">Add to cart</button>
+          <button class="pill-button" on="tap:AMP.setState({ items: items + 1 })">Add to cart</button>
 
         </div>
 
